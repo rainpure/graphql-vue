@@ -34,8 +34,8 @@
 	const upvoteMutation = `
 	mutation upvotePost($postId: Int!) {
 		upvotePost(postId: $postId) {
-		id
-		agree
+			id
+			agree
 		}
 	}
 	`;

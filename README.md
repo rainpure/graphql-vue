@@ -30,3 +30,15 @@ It will open a browser window, or you can browse to http://localhost:3000.
 ```
 npm run build
 ```
+
+## Server ##
+
+`http://localhost:8080/graphql`
+
+### 调试平台 ###
+
+`http://localhost:8080/graphiql`
+
+## Client ##
+
+`http://localhost:3000/`
