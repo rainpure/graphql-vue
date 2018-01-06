@@ -12,6 +12,7 @@
 		</template>
 
 		<author v-if="authorId" :id="authorId"></author>
+		<button @click="getAuthor(1)">获取author: {{author}} </button>
 	</div>
 </template>
 
@@ -39,10 +40,20 @@
 		}
 	}
 	`;
+	const authorQuery = `
+	query ($id: Int!) {
+		author(id: $id) {
+			id
+			firstName
+			lastName
+		}
+	}
+	`;
 	export default {
 		data() {
 			return {
 				posts: [],
+				author: {},
 				authorId: null
 			}
 		},
@@ -66,6 +77,18 @@
 				})
 				.then(res => {
 					_this.getPosts();
+				});
+			},
+			getAuthor(id) {
+				let _this = this;
+				this.$ajax.post(`${resources.graphQlApi}`, {
+					query: `${authorQuery}`,
+					variables: {
+						id: id
+					}
+				})
+				.then(res => {
+					_this.author = res.data.data.author;
 				});
 			}
 		},
