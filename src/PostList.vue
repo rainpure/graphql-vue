@@ -1,18 +1,19 @@
 <template>
 	<div class="post-list">
-		<h1>这是一个GraphQL+Vue2.0的小demo</h1>
-		<template>
-			<ul>
-				<li v-for="post in posts" :key="post.id">
-					{{ post.title }} posted by{{ post.author.firstName }} {{ post.author.lastName }}
-					<span>({{ post.agree }} agree)</span>
-					<button @click="upvote(post.id)">投票</button>
-				</li>
-			</ul>
-		</template>
+		<h1 class="title">年度最受欢迎文学作品投票</h1>
+		<ul class="book-list">
+			<li v-for="post in posts" :key="post.id" class="card book-item">
+				<img src="./static/hamburger.png" class="book-cover">
+				<div class="book-info">
+					<p>《{{ post.title }}》</p>
+				 	<p class="author"> 作者：{{ post.author.firstName }}{{ post.author.lastName }}</p>
+					<span class="vote">获得票数：{{ post.agree }}</span>
+					<button class="button button--mini" @click="upvote(post.id)">投票</button>
+				</div>
+			</li>
+		</ul>
 
-		<author v-if="authorId" :id="authorId"></author>
-		<button @click="getAuthor(1)">获取author: {{author}} </button>
+		<button class="button button--mini" @click="getAuthor(1)">获取author: {{author}} </button>
 	</div>
 </template>
 
@@ -54,7 +55,6 @@
 			return {
 				posts: [],
 				author: {},
-				authorId: null
 			}
 		},
 		methods: {
