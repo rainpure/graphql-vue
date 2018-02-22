@@ -5,10 +5,10 @@
 			<li v-for="post in posts" :key="post.id" class="card book-item">
 				<img src="./static/hamburger.png" class="book-cover">
 				<div class="book-info">
-					<p>《{{ post.title }}》</p>
-				 	<p class="author"> 作者：{{ post.author.firstName }}{{ post.author.lastName }}</p>
+					<p>{{ post.title }}<span class="author"> {{ post.author.firstName }}</span></p>
+					<p class="digest">“{{ post.digest }}”</p>
 					<span class="vote">获得票数：{{ post.agree }}</span>
-					<button class="button button--mini" @click="upvote(post.id)">投票</button>
+					<button class="button button--mini vote-btn" @click="upvote(post.id)">投票</button>
 				</div>
 			</li>
 		</ul>
@@ -26,10 +26,10 @@
 			id
 			title
 			agree
+			digest
 			author {
 				id
 				firstName
-				lastName
 			}
 		}
 	}`;
@@ -46,7 +46,6 @@
 		author(id: $id) {
 			id
 			firstName
-			lastName
 		}
 	}
 	`;

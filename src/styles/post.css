@@ -24,13 +24,29 @@
 }
 
 .book-info {
-    padding: 14px;
+    padding: 14px 14px 40px;
 }
 
-.author,
-.vote {
+.author {
     font-size: 13px;
     color: #999;
+}
+
+.vote {
+    font-size: 13px;
+    color: #4caf50;
+    float: left;
+}
+
+.vote-btn {
+    float: right;
+}
+
+.digest {
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 8px;
+    color: #6f2b2b;
 }
 
 
