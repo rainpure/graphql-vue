@@ -44,7 +44,7 @@ npm run build
 `http://localhost:3000/`
 
 
-## 访问localhost解决方案：
+## 通过ip访问解决方案：
 
 ```
 "dev": "webpack-dev-server --inline --hot --port 3000"
