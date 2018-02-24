@@ -4,7 +4,8 @@
   "author": "",
   "private": true,
   "scripts": {
-    "start": "webpack-dev-server --inline --hot --port 3000",
+    "dev": "webpack-dev-server --open --env dev --host 172.16.2.221",
+    "start": "npm run dev",
     "build": "cross-env NODE_ENV=production webpack --progress --hide-modules"
   },
   "dependencies": {

@@ -1,6 +1,6 @@
 <template>
 	<div class="post-list">
-		<h1 class="title">年度最受欢迎文学作品投票</h1>
+		<!-- <h1 class="title">年度最受欢迎文学作品投票</h1> -->
 		<div class="add-book-form">
 			<p>标题：<input type="text" v-model="addParams.title"></p>
 			<p>作者：<input type="text" v-model="addParams.author"></p>

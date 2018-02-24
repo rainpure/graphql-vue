@@ -42,3 +42,8 @@ npm run build
 ## Client ##
 
 `http://localhost:3000/`
+
+"dev": "webpack-dev-server --inline --hot --port 3000"
+访问localhost解决方案：`http://blog.csdn.net/u011102843/article/details/73839366`
+
+配置后访问：`http://172.16.2.221:8081/`
