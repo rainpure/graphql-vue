@@ -55,3 +55,6 @@ npm run build
 参考：http://blog.csdn.net/u011102843/article/details/73839366
 
 配置后访问：`http://172.16.2.221:8081/`
+
+当本机ip更换时，需要同步package.json里的ip地址
+宿舍：`192.168.1.23` 公司： `172.16.2.221`
