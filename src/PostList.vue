@@ -9,7 +9,7 @@
 		</div>
 		<ul class="book-list">
 			<li v-for="post in posts" :key="post.id" class="card book-item">
-				<img src="./static/hamburger.png" class="book-cover">
+				<img :src="post.img" class="book-cover">
 				<div class="book-info">
 					<p>{{ post.title }}</p>
 					<p class="author"> {{ post.author.firstName }}</p>
@@ -52,6 +52,7 @@
 			title
 			agree
 			digest
+			img
 			author {
 				id
 				firstName
