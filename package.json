@@ -4,7 +4,7 @@
   "author": "",
   "private": true,
   "scripts": {
-    "dev": "webpack-dev-server --open --env dev --host 192.168.1.23",
+    "dev": "webpack-dev-server --open --env dev --host 172.16.2.221",
     "start": "npm run dev",
     "build": "node build/build.js"
   },
