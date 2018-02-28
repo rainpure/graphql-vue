@@ -29,6 +29,7 @@ It will open a browser window, or you can browse to http://localhost:3000.
 
 ```
 npm run build
+("build": "cross-env NODE_ENV=production webpack --progress --hide-modules")
 ```
 
 ## Server ##
