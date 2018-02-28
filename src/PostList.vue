@@ -102,9 +102,9 @@
 				this.$ajax.post(`${resources.graphQlApi}`, {
 					query: `${postsAdd}`,
 					variables: {
-						title: _this.addParams.title,
-						digest: _this.addParams.digest,
-						author: _this.addParams.author
+						title: _this.addParams.title || '未输入',
+						digest: _this.addParams.digest || '未输入',
+						author: _this.addParams.author || '未输入'
 					}
 				})
 				.then(res => {
